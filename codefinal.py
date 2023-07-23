@@ -1005,7 +1005,7 @@ class ComplaintManager:
                 f.write(part + "\n")
                 print(f"L'ensemble des parts a été stocké dans le fichier {file_name} !")
 
-    def send_parts(parts, url):
+    def send_parts(self,parts, url):
          
         import requests
         data = {"parts": parts}
