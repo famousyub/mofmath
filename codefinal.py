@@ -1015,16 +1015,7 @@ class ComplaintManager:
         else:
             print("Erreur lors de l'envoi de l'ensemble des parts...")
 
-# 
 
-
-
-
-
-
-
-
-# Exemple d'utilisation
 
 
     def resolve_complaints(self):
@@ -1039,7 +1030,7 @@ class ComplaintManager:
                 print(f"Complaint from Node {node_id} resolved with high priority.")
         self.complaints = []  # Clear resolved complaints
 
-    def generate_key(parts):
+    def generate_key(self,parts):
 
         key = ""
         for i in range(len(parts[0])):
@@ -1052,7 +1043,7 @@ class ComplaintManager:
             f.write(key)
         print(f"La clé ({key}) a été publiée avec succès !")
 
-    def find_max_votes(votes):
+    def find_max_votes(self,votes):
     
         max_votes = max(votes.values())
         max_participants = [participant for participant, num_votes in votes.items() if num_votes == max_votes]
@@ -1061,7 +1052,7 @@ class ComplaintManager:
         else:
             return max_participants
 
-    def disqualify_participants(votes, threshold):
+    def disqualify_participants(self,votes, threshold):
    
         disqualified = [participant for participant, num_votes in votes.items() if num_votes > threshold]
         return disqualified
