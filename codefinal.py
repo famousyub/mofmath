@@ -1037,7 +1037,7 @@ class ComplaintManager:
             char_set = set(part[i] for part in parts)
             key += random.choice(list(char_set))
         return key
-    def publish_key(parts, key):
+    def publish_key(self,parts, key):
   
         with open("key.txt", "w") as f:
             f.write(key)
